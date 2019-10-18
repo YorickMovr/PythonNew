@@ -17,12 +17,12 @@ fid.writelines(li)
 fid.close()
 # ---------------------------------
 # делим файл тут
+# не правильно работает 
+
 csvfile = open('c:/Users/Ярослав/Documents/GitHub/PythonNew/LTV/shuffled_smth.csv', 'r').readlines()
-row_count = math.floor(len(csvfile) *0.7)  # количество строк в первый файл 70%
-# print(row_count)
 
 filename = 1
 for i in range(len(csvfile)):
-    if i == row_count:
-        open("c:/Users/Ярослав/Documents/GitHub/PythonNew/LTV/"+ str(filename) + '.csv', 'w+').writelines(csvfile[i:i+100])
-        filename += 1
+     if i % 10 == 0:
+         open(str(filename) + '.csv', 'w+').writelines(csvfile[i:i+1000])
+         filename += 1
