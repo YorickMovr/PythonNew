@@ -65,6 +65,4 @@ def split(filehandler, delimiter=',', row_limit=1000,
                 current_out_writer.writerow(headers)
         current_out_writer.writerow(row)
 
-csvfile = open('c:/Users/Ярослав/Documents/GitHub/PythonNew/LTV/shuffled_smth.csv', 'r').readlines()
-countOfRowsFor1file = math.floor(len(csvfile) * 0.7)
-split(csvfile, countOfRowsFor1file)
+split(open('c:/Users/Ярослав/Documents/GitHub/PythonNew/LTV/shuffled_smth.csv', 20))
