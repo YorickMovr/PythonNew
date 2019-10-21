@@ -21,25 +21,25 @@ def doShuffle(filePath):
 # делим файл тут
 # не правильно работает 
 # ---------------------------------------------------------------
-# fid = open("c:/Users/Ярослав/Documents/GitHub/PythonNew/LTV/shuffled_"+str(fileName)+".csv", "r")
-# li = fid.readlines()
-# bigPart = math.floor(len(li)*0.7)
-# fid.close()
-# print(bigPart)
+fid = open("c:/Users/Ярослав/Documents/GitHub/PythonNew/LTV/shuffled_"+str(fileName)+".csv", "r")
+li = fid.readlines()
+bigPart = math.floor(len(li)*0.7)
+fid.close()
+print(bigPart)
 # -------------------------------------------------------
-# import os
+import os
 
-def split(filehandler, delimiter=',', row_limit= 50,
+def split(filehandler, delimiter=',', row_limit= bigPart,
     output_name_template='c:/Users/Ярослав/Documents/GitHub/PythonNew/LTV/output_%s.csv', output_path='.', keep_headers=True):
 
         import csv
 # ----------------------
-        fid = open("c:/Uers/Ярослав/Documents/GitHub/PythonNew/LTV/shuffled_"+str(fileName)+".csv", "r")
-        li = fid.readlines()
-        bigPart = math.floor(len(li)*0.7)
-        row_limit = bigPart
-        fid.close()
-        print(bigPart)
+        # fid = open("c:/Uers/Ярослав/Documents/GitHub/PythonNew/LTV/shuffled_"+str(fileName)+".csv", "r")
+        # li = fid.readlines()
+        # bigPart = math.floor(len(li)*0.7)
+        # row_limit = bigPart
+        # fid.close()
+        # print(bigPart)
 # -----------------------
         reader = csv.reader(filehandler, delimiter=delimiter)
         current_piece = 1
